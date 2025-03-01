@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-dark-grey: #322f30;
+  --color-blue-dark: #03045e;
+  --color-blue-med: #0077b6;
+  --color-blue-light: #00b4d8;
+  --color-blue-ultra-light: #e7f6f8;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  user-select: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  scroll-margin-top: 8rem;
+}
+
+/* ----- HEADER ----- */
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(144, 225, 239, 0.075), #0077b663),
+    url(../img/medfam.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header {
+  padding: 3rem 1rem;
+  background-color: white;
+}
+
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation-name: showFixedNav;
+  animation-duration: 300ms;
+}
+
+@keyframes showFixedNav {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.icon-logo-header {
+  width: 20rem;
+  height: auto;
+}
+
+.nav-header-list-lg {
+  list-style-type: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-header-link-lg {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--color-dark-grey);
+  transition: all 500ms;
+  position: relative;
+}
+
+.nav-header-link-lg:hover {
+  color: var(--color-blue-light);
+  transition: all 500ms;
+}
+
+.nav-header-link-lg:hover::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: var(--color-blue-light);
+  width: 70%;
+  height: 0.3rem;
+  left: 0;
+  top: -9px;
+  animation-name: showBefore;
+  animation-duration: 400ms;
+}
+
+@keyframes showBefore {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.box-hero-features {
+  padding: 4rem;
+  background-color: rgba(255, 255, 255, 0.795);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.box-hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-hero-feature {
+  width: 25px;
+  height: 25px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-navbar {
+  background-color: var(--color-blue-med);
+  color: white;
+  padding: 1.4rem 3rem;
+  border-radius: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn-navbar:hover {
+  animation-name: hoverBtnNav;
+  animation-duration: 300ms;
+}
+
+.btn-hero-services {
+  background-color: var(--color-blue-light);
+  color: white;
+  padding: 1.4rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-right: 2rem;
+  transition: 300ms;
+}
+
+.btn-hero-services:hover {
+  transform: translateY(-3px);
+}
+
+.btn-hero-medics {
+  background-color: var(--color-blue-med);
+  color: white;
+  padding: 1.4rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 300ms;
+}
+
+.btn-hero-medics:hover {
+  transform: translateY(-3px);
+}
+
+.btn-submit {
+  background-color: var(--color-blue-med);
+  color: white;
+  padding: 1.2rem 2.8rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 300ms;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes hoverBtnNav {
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.c-header {
+  height: 86%;
+}
+
+.text-hero {
+  font-size: 2.1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+}
+
+.text-hero-services {
+  color: var(--color-blue-med);
+  font-size: 2rem;
+}
+/* ----- HEADER END ----- */
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 10px #00000082;
+}
+
+h1 .h1-span1 {
+  color: var(--color-blue-med);
+}
+
+h2 {
+  color: var(--color-blue-light);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+h1 .h1-span2 {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-blue-med);
+  letter-spacing: -1px;
+  width: fit-content;
+}
+
+h3 span {
+  display: block;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: var(--color-blue-light);
+  width: fit-content;
+  letter-spacing: 0px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.425);
+  margin-top: 5px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--color-dark-grey);
+  line-height: 30px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: var(--color-dark-grey);
+}
+
+/* ----- ABOUT US ----- */
+
+.section-about {
+  padding: 8rem 0;
+}
+
+.text-about {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-blue-med);
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-about::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 3px solid var(--color-blue-light);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.box-img-services {
+  position: relative;
+}
+
+.box-img-services::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-blue-light);
+  top: 20px;
+  left: 25px;
+  z-index: -1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img-services {
+  width: 100%;
+  height: auto;
+}
+
+/* ----- ABOUT US END ----- */
+
+/* ----- SECTION SERVICES ----- */
+
+.section-services {
+  padding: 8rem 0;
+  background-color: var(--color-blue-ultra-light);
+}
+
+.card-services {
+  background-color: white;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  transition: 400ms;
+}
+
+.card-services:hover {
+  transform: translateY(-5px);
+}
+
+.card-services:hover .icon-card-services {
+  transform: scale(1.2);
+}
+
+.icon-card-services {
+  padding: 0.5rem;
+  background-color: var(--color-blue-med);
+  border-radius: 0.5rem;
+  width: 6rem;
+  height: auto;
+  z-index: 1;
+  transition: 400ms;
+}
+
+.box-icon-card-services {
+  position: relative;
+  z-index: 1;
+}
+
+.box-icon-card-services::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-blue-light);
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+}
+
+/* ----- SECTION SERVICES END ----- */
+
+/* ----- SECTION TEAM ----- */
+.section-team {
+  padding: 8rem 0rem;
+}
+
+.card-team {
+  padding: 2rem;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 2px solid white;
+  transition: 400ms;
+}
+
+.card-team:hover {
+  border: 2px solid var(--color-blue-med);
+  transform: translateY(-4px);
+}
+
+.card-team:hover .img-card-team {
+  width: 165px;
+}
+
+.img-card-team {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  transition: 400ms;
+}
+
+.box-team-social {
+  display: flex;
+  gap: 2rem;
+}
+
+.text-card-team {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.icon-team-social {
+  width: 35px;
+  height: auto;
+  transition: 300ms;
+}
+
+.icon-team-social:hover {
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.26));
+}
+/* ----- SECTION TEAM END ----- */
+
+/* ----- SECTION CONTACT ----- */
+.section-contact {
+  padding: 8rem 0;
+}
+
+.card-contact {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+}
+
+.form-contact {
+  padding: 3rem;
+  width: 50%;
+}
+
+.box-card-contact-details {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background: linear-gradient(to right, var(--color-blue-light), var(--color-blue-med));
+}
+
+.box-form-contact-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-label {
+  font-size: 13px;
+  color: var(--color-dark-grey);
+}
+
+.contact-input {
+  border: 1px solid #322f302c;
+  padding: 1rem 2rem;
+}
+
+.contact-textarea {
+  border: 1px solid #322f302c;
+  padding: 1rem 2rem;
+  resize: none;
+  min-height: 15rem;
+}
+.box-contact-more {
+  display: flex;
+  gap: 2rem;
+}
+
+.icon-contact-more {
+  width: 7rem;
+  height: auto;
+}
+
+.text-contact-more-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text-contact-more-details {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ----- SECTION CONTACT END ----- */
+
+/* ----- SECTION FAQ ----- */
+
+.section-faq {
+  padding: 8rem 0;
+  background-color: var(--color-blue-ultra-light);
+}
+
+.card-faq {
+  background-color: white;
+  padding: 2rem;
+  position: relative;
+  transition: 400ms;
+}
+
+.card-faq:hover {
+  transform: translateY(-5px);
+}
+
+.icon-more {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 30px;
+  height: auto;
+}
+
+.text-title-card-faq {
+  font-size: 18px;
+  color: var(--color-blue-light);
+  font-weight: 700;
+}
+
+.text-details-card-faq {
+  display: none;
+  animation-name: showTextDetailsFaq;
+  animation-duration: 300ms;
+}
+
+@keyframes showTextDetailsFaq {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* ----- SECTION FAQ END ----- */
+
+/* ----- FOOTER ----- */
+
+footer {
+  background-color: var(--color-blue-ultra-light);
+  padding: 4rem;
+}
+
+.logo-footer {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-logo-footer {
+  width: 250px;
+  height: auto;
+}
+
+.nav-footer-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text-title-footer {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-dark-grey);
+}
+.nav-footer-link {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: var(--color-dark-grey);
+}
+
+.box-footer {
+  min-width: 210px;
+}
+
+.box-social-footer {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-social-footer {
+  width: 30px;
+  height: auto;
+}
+
+blockquote {
+  font-size: 14px;
+  color: var(--color-dark-grey);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- FOOTER END ----- */
