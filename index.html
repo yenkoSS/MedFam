@@ -46,7 +46,7 @@
       <div class="container c-header">
         <div class="row" style="height: 100%">
           <div
-            class="col-lg-8 d-flex flex-column align-items-start justify-content-center"
+            class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start justify-content-center"
           >
             <h1 class="mbot-30">
               Medicină<span class="h1-span1"> de familie</span
@@ -97,7 +97,7 @@
     </header>
     <section id="despre" class="section-about">
       <div class="container">
-        <div class="row">
+        <div class="row g-5">
           <div class="col-lg-6 d-flex flex-column justify-content-center">
             <h3 class="mbot-70">Despre noi<span>medicină de familie</span></h3>
             <p class="mbot-40">
@@ -111,7 +111,9 @@
             <p class="text-about mbot-10">Abordare holistică</p>
             <p class="text-about">Tehnologie modernă</p>
           </div>
-          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+          <div
+            class="col-lg-6 d-none d-lg-block justify-content-center align-items-center"
+          >
             <div class="box-img-services">
               <img
                 src="img/despre medfam medicina de familie.jpg"
@@ -434,32 +436,40 @@
         <div class="row d-flex justify-content-center" style="width: 100%">
           <div class="col-lg-10">
             <div class="card-contact">
-              <form action="" class="form-contact">
+              <form
+                action="https://formsubmit.co/[email protected]"
+                method="POST"
+                class="form-contact"
+              >
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Nume de familie</label>
-                  <input type="text" class="contact-input" />
+                  <input type="text" class="contact-input" required="true" />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Prenume</label>
-                  <input type="text" class="contact-input" />
+                  <input type="text" class="contact-input" required="true" />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Adresă de e-mail</label>
-                  <input type="text" class="contact-input" />
+                  <input type="text" class="contact-input" required="true" />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Telefon</label>
-                  <input type="text" class="contact-input" />
+                  <input type="text" class="contact-input" required="true" />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Mesajul tău</label>
-                  <textarea type="text" class="contact-textarea"></textarea>
+                  <textarea
+                    type="text"
+                    class="contact-textarea"
+                    required="true"
+                  ></textarea>
                 </div>
-                <button class="btn-submit">Trimite</button>
+                <button type="submit" class="btn-submit">Trimite</button>
               </form>
               <div class="box-card-contact-details">
                 <div class="wrapper">
-                  <div class="box-contact-more mbot-40">
+                  <div class="box-contact-more mbot-70">
                     <img
                       src="icons/telefon medfam.svg"
                       alt="telefon medicina de familie medfam"
@@ -470,7 +480,7 @@
                       <p class="text-white">0749 406 638</p>
                     </div>
                   </div>
-                  <div class="box-contact-more mbot-40">
+                  <div class="box-contact-more mbot-70">
                     <img
                       src="icons/email medfam.svg"
                       alt="email medicina de familie medfam"

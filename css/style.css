@@ -17,7 +17,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 55%;
   user-select: none;
   font-family: "Open Sans", sans-serif;
 }
@@ -30,6 +30,7 @@ section {
 
 header {
   height: 100vh;
+  min-height: 700px;
   background-image: linear-gradient(to bottom, rgba(144, 225, 239, 0.075), #0077b663),
     url(../img/medfam.jpg);
   background-size: cover;
@@ -63,13 +64,13 @@ header {
 }
 
 .icon-logo-header {
-  width: 20rem;
+  width: 15rem;
   height: auto;
 }
 
 .nav-header-list-lg {
   list-style-type: none;
-  display: flex;
+  display: none;
   gap: 4rem;
 }
 
@@ -141,6 +142,7 @@ button {
 }
 
 .btn-navbar {
+  display: none;
   background-color: var(--color-blue-med);
   color: white;
   padding: 1.4rem 3rem;
@@ -214,13 +216,13 @@ button {
 
 .text-hero-services {
   color: var(--color-blue-med);
-  font-size: 2rem;
+  font-size: 16px;
 }
 /* ----- HEADER END ----- */
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 6rem;
+  font-size: 3.6rem;
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 10px #00000082;
@@ -238,7 +240,7 @@ h2 {
 
 h1 .h1-span2 {
   display: block;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
 }
@@ -447,16 +449,18 @@ p {
 .card-contact {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
+  flex-direction: column;
 }
 
 .form-contact {
   padding: 3rem;
-  width: 50%;
+  width: 100%;
 }
 
 .box-card-contact-details {
-  width: 50%;
+  width: 100%;
   height: auto;
+  min-height: 45rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -485,7 +489,7 @@ p {
   border: 1px solid #322f302c;
   padding: 1rem 2rem;
   resize: none;
-  min-height: 15rem;
+  min-height: 8rem;
 }
 .box-contact-more {
   display: flex;
@@ -528,6 +532,7 @@ p {
 }
 
 .icon-more {
+  display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -537,7 +542,7 @@ p {
 }
 
 .text-title-card-faq {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: var(--color-blue-light);
   font-weight: 700;
 }
@@ -623,3 +628,43 @@ blockquote {
 }
 
 /* ----- FOOTER END ----- */
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h1 .h1-span2 {
+    font-size: 2.4rem;
+  }
+
+  .card-contact {
+    flex-direction: row;
+  }
+
+  .icon-more {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+  .text-hero-services {
+    font-size: 2rem;
+  }
+
+  .nav-header-list-lg {
+    display: flex;
+  }
+
+  .icon-logo-header {
+    width: 20rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-navbar {
+    display: block;
+  }
+}
