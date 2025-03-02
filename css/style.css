@@ -20,6 +20,11 @@ html {
   font-size: 55%;
   user-select: none;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 section {
@@ -41,6 +46,18 @@ header {
   padding: 3rem 1rem;
   background-color: white;
   position: relative;
+  animation-name: showNavHeader;
+  animation-duration: 500ms;
+}
+
+@keyframes showNavHeader {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .fixed-nav {
@@ -170,6 +187,20 @@ header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  animation-name: showBoxHero;
+  animation-duration: 600ms;
+}
+
+@keyframes showBoxHero {
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .box-hero-feature {
@@ -189,6 +220,22 @@ button {
   font-family: "Raleway";
   font-size: 16px;
   font-weight: 600;
+}
+
+.btn-hero-box {
+  animation-name: showBtnHeroBox;
+  animation-duration: 700ms;
+}
+
+@keyframes showBtnHeroBox {
+  from {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .btn-navbar {
@@ -276,6 +323,18 @@ h1 {
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 10px #00000082;
+  animation-name: showH1;
+  animation-duration: 700ms;
+}
+
+@keyframes showH1 {
+  from {
+    transform: translateY(-500px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 h1 .h1-span1 {
@@ -296,6 +355,20 @@ h2 {
   font-size: 2rem;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
+  animation-name: showTextHeroSubtitle;
+  animation-duration: 1s;
+}
+
+@keyframes showTextHeroSubtitle {
+  from {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h3 {
@@ -364,11 +437,11 @@ p {
   margin-right: 10px;
 }
 
-.box-img-services {
+.box-img-about {
   position: relative;
 }
 
-.box-img-services::before {
+.box-img-about::before {
   position: absolute;
   content: "";
   display: block;
@@ -381,7 +454,7 @@ p {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.img-services {
+.img-about {
   width: 100%;
   height: auto;
 }
@@ -682,6 +755,39 @@ blockquote {
 }
 
 /* ----- FOOTER END ----- */
+
+/* ----- OFFSETS ----- */
+
+.offset-y1pos {
+  transform: translateY(20rem);
+}
+
+.offset-y2pos {
+  transform: translateY(25rem);
+}
+.offset-y3pos {
+  transform: translateY(30rem);
+}
+
+.offset-y0 {
+  transform: translateY(0px);
+  transition: 1000ms;
+}
+
+.offset-x1pos {
+  transform: translateX(20rem);
+}
+
+.offset-x1neg {
+  transform: translateX(-20rem);
+}
+
+.offset-x0 {
+  transform: translateX(0px);
+  transition: 900ms;
+}
+
+/* ----- OFFSETS END ----- */
 
 @media screen and (min-width: 576px) {
   .img-card-team {
