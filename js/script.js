@@ -63,3 +63,20 @@ document.querySelectorAll(".card-faq").forEach((card) => {
 });
 
 /* CARDS FAQ END */
+
+document.querySelector(".icon-menu-nav-header").addEventListener("click", () => {
+  document.querySelector(".nav-header-list-sm").style.display = "flex";
+});
+
+document.querySelector(".icon-close").addEventListener("click", () => {
+  document.querySelector(".nav-header-list-sm").style.display = "none";
+});
+
+document.querySelectorAll(".nav-header-link-sm").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const id = link.getAttribute("href");
+    document.querySelector(".nav-header-list-sm").style.display = "none";
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  });
+});
