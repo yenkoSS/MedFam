@@ -110,3 +110,26 @@ cardsFaqList.forEach((card) => offsetYObserver.observe(card));
 h3List.forEach((h3) => offsetXObserver.observe(h3));
 offsetXObserver.observe(cardContact);
 offsetXObserver.observe(imgAbout);
+
+/* emailJS Configuration */
+
+emailjs.init("eSvonNDBWdPw7EXFY"); /* emailJS public KEY*/
+
+function sendEmail() {
+  let params = {
+    name: document.querySelector("#form-name").value,
+    email: document.querySelector("#form-email").value,
+    phone: document.querySelector("#form-phone").value,
+    message: document.querySelector("#form-message").value,
+  };
+
+  const templateID = "template_952np1l"; /* emailJS templateID */
+  const serviceId = "service_mywu9tt"; /* emailJS serviceID */
+
+  emailjs.send(serviceId, templateID, params).then(alert('Mesaj transmis!"'));
+}
+
+document.querySelector(".form-contact").addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendEmail();
+});

@@ -20,6 +20,10 @@
       MedFam - medicină de familie, monitorizare boli cronice, vaccinari, servicii de
       urgenta
     </title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <header id="home">
@@ -478,31 +482,39 @@
         <div class="row d-flex justify-content-center" style="width: 100%">
           <div class="col-lg-10">
             <div class="card-contact offset-x1neg">
-              <form
-                action="https://formsubmit.co/petrucornel.stefan@gmail.com"
-                method="POST"
-                class="form-contact"
-              >
+              <form class="form-contact">
                 <div class="box-form-contact-feature mbot-20">
-                  <label for="" class="contact-label">Nume de familie</label>
-                  <input type="text" class="contact-input" required="true" />
-                </div>
-                <div class="box-form-contact-feature mbot-20">
-                  <label for="" class="contact-label">Prenume</label>
-                  <input type="text" class="contact-input" required="true" />
+                  <label for="" class="contact-label">Nume complet</label>
+                  <input
+                    type="text"
+                    id="form-name"
+                    class="contact-input"
+                    required="true"
+                  />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Adresă de e-mail</label>
-                  <input type="text" class="contact-input" required="true" />
+                  <input
+                    type="text"
+                    id="form-email"
+                    class="contact-input"
+                    required="true"
+                  />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Telefon</label>
-                  <input type="text" class="contact-input" required="true" />
+                  <input
+                    type="text"
+                    id="form-phone"
+                    class="contact-input"
+                    required="true"
+                  />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Mesajul tău</label>
                   <textarea
                     type="text"
+                    id="form-message"
                     class="contact-textarea"
                     required="true"
                   ></textarea>
