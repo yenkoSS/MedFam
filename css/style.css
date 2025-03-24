@@ -582,12 +582,15 @@ p {
 .form-contact {
   padding: 3rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box-card-contact-details {
   width: 100%;
   height: auto;
-  min-height: 45rem;
+  min-height: 60rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
