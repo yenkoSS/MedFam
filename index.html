@@ -483,32 +483,18 @@
           <div class="col-lg-10">
             <div class="card-contact offset-x1neg">
               <form class="form-contact">
+                <p class="text-error"></p>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Nume complet</label>
-                  <input
-                    type="text"
-                    id="form-name"
-                    class="contact-input"
-                    required="true"
-                  />
+                  <input type="text" id="form-name" class="contact-input" />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Adresă de e-mail</label>
-                  <input
-                    type="text"
-                    id="form-email"
-                    class="contact-input"
-                    required="true"
-                  />
+                  <input type="text" id="form-email" class="contact-input" />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Telefon</label>
-                  <input
-                    type="text"
-                    id="form-phone"
-                    class="contact-input"
-                    required="true"
-                  />
+                  <input type="text" id="form-phone" class="contact-input" />
                 </div>
                 <div class="box-form-contact-feature mbot-20">
                   <label for="" class="contact-label">Mesajul tău</label>
@@ -516,11 +502,11 @@
                     type="text"
                     id="form-message"
                     class="contact-textarea"
-                    required="true"
                   ></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Trimite</button>
-              </form>
+                <p class="text-success">Mesajul a fost transmis! Mulțumim!</p>
+              </form action>
               <div class="box-card-contact-details">
                 <div class="wrapper">
                   <div class="box-contact-more mbot-70">
@@ -646,5 +632,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/formjs.js"></script>
   </body>
 </html>
