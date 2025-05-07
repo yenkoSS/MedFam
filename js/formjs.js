@@ -10,7 +10,7 @@ const serviceId = "service_mywu9tt"; /* emailJS serviceID */
 
 function sendEmail() {
   let params = {
-    name: formEmailEl.value,
+    name: formNameEl.value,
     email: formEmailEl.value,
     phone: formPhoneEl.value,
     message: formMessageEl.value,
