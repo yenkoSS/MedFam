@@ -35,6 +35,21 @@ window.addEventListener("scroll", () => {
   }
 });
 
+document.querySelector(".btn-hero-medics").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#echipa").scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".btn-hero-services").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#servicii").scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".btn-navbar").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+});
+
 /* CARDS FAQ */
 
 document.querySelectorAll(".card-faq").forEach((card) => {
